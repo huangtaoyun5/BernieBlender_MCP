@@ -1,6 +1,6 @@
 # Computational Tectonic Production Line - Migration Guide
 
-> **To User / AI Agent**: This file contains all necessary information to set up and resume the "BernieBlenderMCP" project on a new machine.
+> **To User**: This file contains all necessary information to set up and resume the "BernieBlenderMCP" project on a new machine.
 
 ## 1. Project Overview
 **Goal**: Generate "Organic Ore" structures using a Self-Organizing Agent logic (RMIT Tectonic style) in Blender, triggered via an external MCP bridge.
@@ -47,17 +47,7 @@ e:\BernieBlenderMCP\
 - **Execution Scope**:
     - `blender_bridge_server.py` uses `exec()` to run the code.
     - **CRITICAL**: `organic_ore.py` is written delicately to handle `exec` scope. The `Agent` class and imports are defined **locally inside `BioStructure.__init__`** to avoid `NameError` or `AttributeError` when running in the bridge's closure. **Do not move them to global scope without testing.**
-
-## 5. Current Implementation Status
-- [x] **Infrastructure**: Stable.
-- [x] **Generative Logic**:
-    - **Primary**: Continuous Poly-Curves (G-code ready).
-    - **Secondary**: Louvered Fins (Visual detail).
-    - **Diagrid**: Structural mesh.
-    - **Material**: Procedural Thin-Film Interference (Rainbow Chromate).
-- [ ] **Next Steps**:
-    - Export `Primary_Structure` points to G-code (`.gcode`) for robotic arm fabrication.
     - Implement interactive parameters via MCP (e.g. `attractor_points`).
 
 ---
-**Bernie / Antigravity - 2025-12-25**
+**Bernie / - 2025-12-25**
